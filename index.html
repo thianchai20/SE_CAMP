@@ -1,20 +1,92 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Page Title</Title>
-</head>
-<body>
-    
-        <h1>This is a Heading</h1>
-        <p><b>This </b>is a
-            <br><hr /><br />
-            <i>paragraph. ไทย </i>
             </p>
-            <h>List</h>
-            <ul>
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
-            </ul>
+        <title>Page Title</title>
+        <meta charset="ytf-8"/>
+    </head>
+    <body>
+        <h1>Workshop #HTML - FORM</h1>
+        <form action="#">
+            <table>
+                <tr>
+                    <td><b>ชื่อ</b></td>
+                    <td><input type="text" /></td>
+                </tr>
+                <tr>
+                    <td><b>สกุล</b></td>
+                    <td><input type="text" /></td>
+                </tr>
+                <tr>
+                    <td><b>วัน/เดือน/ปีเกิด</b></td>
+                    <td><input type="date" /></td>
+                </tr>
+                <tr>
+                    <td><b>อายุ</b></td>
+                    <td><input type="text" /></td>
+                </tr>
+                <tr>
+                    <td><b>เพศ</b></td>
+                    <td>
+                        <input id="radio_a"
+                                type="radio"
+                                name="same_radio"/>
+                        <label for="radio_a">ชาย</label>
+                        <input id="radio_b"
+                                type="radio"
+                                name="same_radio"/>
+                        <label for="radio_b">หญิง</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>รูป</b>
+                    </td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td><b>ที่อยู่</b></td>
+                    <td><textarea rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>สีที่ชอบ</b>
+                    </td>
+                    <td>
+                        <select>
+                            <option
+                            value=""
+                            disabled
+                            selected>สีแดง</option>
+                            <option>สีแหลือง</option>
+                            <option>สีน้ำเงิน</option>
+                            <option>สีเขียว</option>
+                            <option>สีส้ม</option>
+                            <option>สีม่วง</option>
+                            <option>สีขาว</option>
+                            <option>สีดำ</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>แนวเพลงที่ชอบ</b></td>
+                    <td>
+                        <input id="radio_a"
+                                type="radio"
+                                name="same_radio"/>
+                        <label for="radio_a">เพื่อชีวิต</label>
+                        <input id="radio_b"
+                                type="radio"
+                                name="same_radio"/>
+                        <label for="radio_b">ลูกทุ่ง</label>
+                        <input id="radio_c"
+                                type="radio"
+                                name="same_radio"/>
+                        <label for="radio_c">อื่นๆ</label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
     </body>
-</html>\
+</html>
