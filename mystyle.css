@@ -1,24 +1,39 @@
-.box{
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     margin-top: 50px;
     width: 400px;
     height: 400px;
     color: rgb(255, 255, 255);
-    background-color:rgb(112, 210, 215);
+    background-color: rgb(112, 210, 215);
     text-align: center;
-    border: 5px dashed rgb(0,255,0);
+    border: 5px dashed rgb(0, 255, 0);
     padding-top: 10px;
     margin: 50px 25px;
-    transition: transform 0.3s , box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.box:hover{
-    
-    background-color:rgb(112, 155, 215);
+.box:hover {
+
+    background-color: rgb(112, 155, 215);
     transform: scale(1.1);
     box-shadow: 15px 15px 15px rgb(54, 56, 83);
-   
+
+}
+
+p.italic {
+    font-style: italic;
+    font-weight: bold;
+}
+
+div>div>p {
+    font-size: large;
+    font-weight: bold;
+}
+
+div>p {
+    font-size: smaller;
+    font-weight: bold;
 }
