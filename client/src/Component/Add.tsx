@@ -1,13 +1,17 @@
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Todo } from "../types/todo";
 import { useForm } from "react-hook-form";
+import { useTodoStore } from "../store/todoStore";
 
 const Add = () => {
     const { register, handleSubmit } = useForm<Todo>();
+    const {addTodos} = useTodoStore();
+    const navigate = useNavigate();
 
     const submitData = (data: Todo) => {
-        console.log(data);
+        addTodos(data);
+        navigate("/");
     };
 
     return (
@@ -23,6 +27,7 @@ const Add = () => {
                     />
                 </label>
                 <select id="" className="w-full p-2 bg-transparent border border-white rounded-lg my-2" {...register("status")}>
+                    <option defaultChecked value="">Select Your Status</option>
                     <option value="Pending">Pending</option>
                     <option value="Doing">Doing</option>
                     <option value="Done">Done</option>
