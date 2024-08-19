@@ -17,6 +17,19 @@ const Edit = () => {
             setValue("label", todo.label);
             setValue("description", todo.description);
             setValue("status", todo.status);
+
+            localStorage.setItem("currentTodo", JSON.stringify(todo));
+        } else {
+            const savedTodo = localStorage.getItem("currentTodo");
+            if (savedTodo) {
+                const parsedTodo = JSON.parse(savedTodo) as Todo;
+                if (parsedTodo.id === Number(id)) {
+                    setValue("id", parsedTodo.id);
+                    setValue("label", parsedTodo.label);
+                    setValue("description", parsedTodo.description);
+                    setValue("status", parsedTodo.status);
+                }
+            }
         }
     }, [id, setValue, todos]);
 
@@ -27,7 +40,7 @@ const Edit = () => {
 
     return (
         <div>
-            <h1 className="text-center text-2xl text-white text-4xl font-bold">EDIT TODO</h1>
+            <h1 className="text-center text-2xl text-white  font-bold">EDIT TODO</h1>
             <form onSubmit={handleSubmit(submitData)}>
                 <label className="input input-bordered flex items-center gap-2 my-2 bg-white text-black">
                     <input
