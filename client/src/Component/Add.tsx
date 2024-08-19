@@ -16,35 +16,26 @@ const Add = () => {
 
     return (
         <div>
-            <h1 className="text-center text-2xl">ADD TODO</h1>
+            <h1 className="text-center text-2xl text-white text-4xl font-bold">ADD TODO</h1>
             <form onSubmit={handleSubmit(submitData)}>
-                <label className="input input-bordered flex items-center gap-2 my-2">
-                    <input
-                        type="text"
-                        className="grow"
-                        placeholder="Label"
-                        {...register("label")}
-                    />
+                <label className="input input-bordered flex items-center gap-2 my-2 bg-white text-black">
+                    <input type="text" className="grow text-black" placeholder="Label" {...register("label")}/>
                 </label>
-                <select id="" className="w-full p-2 bg-transparent border border-white rounded-lg my-2" {...register("status")}>
+                <select id="" className="w-full p-2 bg-transparent border border-white rounded-lg my-2 bg-white text-black" {...register("status")}>
                     <option defaultChecked value="">Select Your Status</option>
                     <option value="Pending">Pending</option>
                     <option value="Doing">Doing</option>
                     <option value="Done">Done</option>
                 </select>
-                <textarea
-                    className="textarea textarea-bordered w-full my-2"
-                    placeholder="description"
-                    {...register("description")}
-                ></textarea>
+                <textarea className="textarea textarea-bordered w-full my-2 bg-white text-black" placeholder="description" {...register("description")}></textarea>
 
-                <div className="flex justify-between">
+                <div className="flex justify-between ">
                     <Link to="/">
-                        <button className="btn block mt-4" type="submit">
+                        <button className="btn block mt-4 text-xl" type="submit">
                             Back
                         </button>
                     </Link>
-                    <button className="btn block mt-4" type="submit">
+                    <button className="btn block mt-4 bg-red-700 font-bold text-white text-xl" type="submit">
                         Submit
                     </button>
                 </div>
